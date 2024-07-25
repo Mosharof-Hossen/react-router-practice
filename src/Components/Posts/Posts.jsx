@@ -4,7 +4,6 @@ import Post from '../Post/Post';
 
 const Posts = () => {
     const posts = useLoaderData();
-    console.log(posts);
     return (
         <div>
             <h1 className='text-3xl'>Posts : {posts.length}</h1>

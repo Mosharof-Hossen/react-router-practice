@@ -1,18 +1,23 @@
 
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
 
 function App() {
-
-
+  const navigation = useNavigation();
+  console.log(navigation);
   return (
     <>
       <Header></Header>
-      
-      <div>
-        <Outlet></Outlet>
-      </div>
+
+      {
+        navigation.state === "loading" ? "Loading...." :
+          <div>
+            <Outlet></Outlet>
+          </div>
+      }
+
+
     </>
   )
 }
