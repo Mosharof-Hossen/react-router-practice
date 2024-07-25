@@ -5,7 +5,7 @@ import Header from './Components/Header/Header'
 
 function App() {
   const navigation = useNavigation();
-  console.log(navigation);
+  
   return (
     <>
       <Header></Header>
